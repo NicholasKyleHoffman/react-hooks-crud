@@ -1,28 +1,31 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import UserTable from './tables/UserTable';
+// import AddUserTable from './tables/AddUserTable';
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
+// simple functional component returns app skeleton
+const App = () => {
+  const usersData = [
+    { id:1, name:'Nick', username:'ebb_n_flow' },
+    { id:2, name:'Shane O.', username:'tootired' },
+    { id:3, name:'Benjamin', username:'rootsrevival' },
+  ]
+
+  const [users, setUsers] = useState(usersData)
+
+  return (
+    <div className="container">
+      <h1>CRUD App with Hooks</h1>
+      <div className="flex-row">
+        <div className="flex-large">
+          <h2>Add User</h2>
+        </div>
+        <div className="flex-large">
+          <h2>View Users</h2>
+          <UserTable users={users}/>
+        </div>
       </div>
-    );
-  }
+    </div>
+  )
 }
 
 export default App;
