@@ -2,7 +2,7 @@
   "name": "react-hooks-crud",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://github.com/NicholasKyleHoffman/react-hooks-crud/src/index.js",
+  "homepage": "https://nicholaskylehoffman.github.io/react-hooks-crud/",
   "dependencies": {
     "react": "^16.7",
     "react-dom": "^16.7",
