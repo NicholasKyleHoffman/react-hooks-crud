@@ -2,7 +2,6 @@ import React, { useState, Fragment } from "react";
 import UserTable from "./tables/UserTable";
 import AddUserForm from "./forms/AddUserForm";
 import EditUserForm from "./forms/EditUsersForm";
-import Button from "react-bootstrap/Button";
 
 const App = () => {
   const usersData = [
@@ -51,12 +50,12 @@ const App = () => {
 
   return (
     <div className="container">
-      <h1>CRUD React App with Hooks - No Classes</h1>
+      <h1>React CRUD App w/Hooks</h1>
       <div className="flex-row">
         <div className="flex-large">
           {editing ? (
             <Fragment>
-              <h2>Edit user</h2>
+              <h2>Edit User</h2>
               <EditUserForm
                 editing={editing}
                 setEditing={setEditing}
@@ -66,13 +65,13 @@ const App = () => {
             </Fragment>
           ) : (
             <Fragment>
-              <h2>Add user</h2>
+              <h2>Add User</h2>
               <AddUserForm addUser={addUser} />
             </Fragment>
           )}
         </div>
         <div className="flex-large">
-          <h2>View users</h2>
+          <h2>View Users</h2>
           <UserTable users={users} editRow={editRow} deleteUser={deleteUser} />
         </div>
       </div>
