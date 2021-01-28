@@ -1,53 +1,53 @@
-import React, { useState, Fragment } from 'react';
-import UserTable from './tables/UserTable';
-import AddUserForm from './forms/AddUserForm';
-import EditUserForm from './forms/EditUsersForm';
+import React, { useState, Fragment } from "react";
+import UserTable from "./tables/UserTable";
+import AddUserForm from "./forms/AddUserForm";
+import EditUserForm from "./forms/EditUsersForm";
+import Button from "react-bootstrap/Button";
 
 const App = () => {
   const usersData = [
-    { id:1, name:'Nick', username:'ebb_n_flow' },
-    { id:2, name:'Shane O.', username:'too-tired' },
-    { id:3, name:'Shawna', username:'rootsrevival' },
-    { id:4, name:'Sheena, W.P.', username:'sheenaWp312' }
-  ]
+    { id: 1, name: "Nick", username: "ebb_n_flow" },
+    { id: 2, name: "Shane O.", username: "too-tired" },
+    { id: 3, name: "Shawna", username: "rootsrevival" },
+    { id: 4, name: "Sheena, W.P.", username: "sheenaWp312" }
+  ];
 
+  const initialFormState = { id: null, name: "", username: "" };
 
-  const initialFormState = {id:null, name:'', username:'' }
+  // set state Hooks syntax - you define the two params in [x, y].
+  // useState comes from React import for handling state
 
-// set state Hooks syntax - you define the two params in [x, y]. 
-// useState comes from React import for handling state
+  const [users, setUsers] = useState(usersData);
+  const [editing, setEditing] = useState(false);
+  const [currentUser, setCurrentUser] = useState(initialFormState);
 
-  const [users, setUsers] = useState(usersData)
-  const [editing, setEditing] = useState(false)
-  const [ currentUser, setCurrentUser ] = useState(initialFormState)
-
-// increment the ID of the new user manually - function will 
-// take a user object as a parameter,  add them to the users array of objects
-// the ...users code ensures that all the previous users remain in the array
+  // increment the ID of the new user manually - function will
+  // take a user object as a parameter,  add them to the users array of objects
+  // the ...users code ensures that all the previous users remain in the array
 
   const addUser = (user) => {
-    user.id = user.length + 1
-    setUsers([ ...users, user ])
-  } 
+    user.id = user.length + 1;
+    setUsers([...users, user]);
+  };
 
   // pass deleteUser through props to UserTable
-  // use setter to take ID of user & filter them out of the users array 
+  // use setter to take ID of user & filter them out of the users array
   const deleteUser = (id) => {
-    setEditing(false)
+    setEditing(false);
 
-    setUsers(users.filter(user => user.id !== id))
-  }
-  
+    setUsers(users.filter((user) => user.id !== id));
+  };
+
   const editRow = (user) => {
-    setEditing(true)
-    setCurrentUser({ id:user.id, name:user.name, username:user.username})
-  }
+    setEditing(true);
+    setCurrentUser({ id: user.id, name: user.name, username: user.username });
+  };
 
   const updateUser = (id, updatedUser) => {
-    setEditing(false)
+    setEditing(false);
 
-    setUsers(users.map(user=> (user.id === id ? updatedUser : user))) 
-  }
+    setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
+  };
 
   return (
     <div className="container">
@@ -77,7 +77,7 @@ const App = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
 export default App;
