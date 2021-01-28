@@ -28,6 +28,7 @@ const AddUserForm = (props) => {
       <input
         type="text"
         name="name"
+        placeholder="Name"
         value={user.name}
         onChange={handleInputChange}
       />
@@ -35,6 +36,7 @@ const AddUserForm = (props) => {
       <input
         type="text"
         name="username"
+        placeholder="Username"
         value={user.username}
         onChange={handleInputChange}
       />
