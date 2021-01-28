@@ -1,5 +1,3 @@
-## SEE LIVE PROJECT HERE: https://codesandbox.io/s/react-crud-hooks-users-table-qbqkx
-
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
