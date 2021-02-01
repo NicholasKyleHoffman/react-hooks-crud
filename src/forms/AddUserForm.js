@@ -4,8 +4,9 @@ const AddUserForm = (props) => {
   const initialFormState = { id: null, name: "", username: "" };
   const [user, setUser] = useState(initialFormState);
 
+  // should this be a different var type? table is not updating
   // update state based on event in input
-  const handleInputChange = (event) => {
+  const inputHandler = (event) => {
     const { name, value } = event.target;
     setUser({ ...user, [name]: value });
   };
@@ -16,7 +17,7 @@ const AddUserForm = (props) => {
         // default event for form is submit (preventing with a check)
         event.preventDefault();
         if (!user.name || !user.username) {
-          alert("Enter both name and username");
+          alert("Enter both a Name and Username please!");
           return;
         } else {
           props.addUser(user);
@@ -28,17 +29,17 @@ const AddUserForm = (props) => {
       <input
         type="text"
         name="name"
-        placeholder="Name"
+        placeholder="Enter a name..."
         value={user.name}
-        onChange={handleInputChange}
+        onChange={inputHandler}
       />
       <label>Username</label>
       <input
         type="text"
         name="username"
-        placeholder="Username"
+        placeholder="Enter a username..."
         value={user.username}
-        onChange={handleInputChange}
+        onChange={inputHandler}
       />
       <button className="btn btn-success">Add New User</button>
     </form>

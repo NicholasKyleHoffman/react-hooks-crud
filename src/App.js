@@ -3,6 +3,9 @@ import UserTable from "./tables/UserTable";
 import AddUserForm from "./forms/AddUserForm";
 import EditUserForm from "./forms/EditUsersForm";
 
+// Create initial table with static/pre-defined users
+// need to make this table available to other portions
+// so CRUD is complete with adding/editing/deleting users
 const App = () => {
   const usersData = [
     { id: 1, name: "Nick", username: "ebb_n_flow" },
@@ -11,21 +14,20 @@ const App = () => {
     { id: 4, name: "Sheena, W.P.", username: "sheenaWp312" }
   ];
 
+  // sets initial form state - "blank slate"
   const initialFormState = { id: null, name: "", username: "" };
 
   // set state Hooks syntax - you define the two params in [x, y].
   // useState comes from React import for handling state
-
   const [users, setUsers] = useState(usersData);
   const [editing, setEditing] = useState(false);
   const [currentUser, setCurrentUser] = useState(initialFormState);
 
   // increment the ID of the new user manually - function will
-  // take a user object as a parameter,  add them to the users array of objects
+  // take a user object as a parameter & add them to the users array of objects
   // the ...users code ensures that all the previous users remain in the array
-
   const addUser = (user) => {
-    user.id = user.length + 1;
+    user.id = user.length + 4;
     setUsers([...users, user]);
   };
 
