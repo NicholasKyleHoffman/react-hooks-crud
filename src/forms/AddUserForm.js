@@ -4,7 +4,7 @@ const AddUserForm = (props) => {
   const initialFormState = { id: null, name: "", username: "" };
   const [user, setUser] = useState(initialFormState);
 
-  // should this be a different var type? table is not updating
+  // should this be a different var type? table is not updating with new additions
   // update state based on event in input
   const inputHandler = (event) => {
     const { name, value } = event.target;
