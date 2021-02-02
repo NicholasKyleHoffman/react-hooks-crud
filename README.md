@@ -2,6 +2,14 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Screenshot #1) Add Contact Modal/View
+
+<a href="https://ibb.co/kBq1NTV"><img src="https://i.ibb.co/wgps5qZ/Add-Contact-Modal.jpg" alt="Add-Contact-Modal" border="0"></a>
+
+## Screenshot #2) View Contact Modal/View
+
+<a href="https://ibb.co/XYcsfqn"><img src="https://i.ibb.co/mNfqr3n/Contacts-List.jpg" alt="Contacts-List" border="0"></a>
+
 ## Available Scripts
 
 In the project directory, you can run:
