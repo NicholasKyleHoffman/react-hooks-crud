@@ -23,6 +23,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 <img src="https://i.ibb.co/VSLgWMd/user-added-to-table-img5.jpg" alt="user-added-to-table-img5" border="0">
 
+## Screenshot  #6) User DELETED from Table ** Success **
+
+<img src="https://i.ibb.co/SrVvmSr/user-deleted-from-table-img6.jpg" alt="user-deleted-from-table-img6" border="0">
+
 ## Available Scripts
 
 In the project directory, you can run:
