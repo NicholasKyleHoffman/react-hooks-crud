@@ -50,6 +50,7 @@ const App = () => {
     setUsers(users.map((user) => (user.id === id ? updatedUser : user)));
   };
 
+  // deleteUser() fixed -> had to add function to <EditUserForm>
   return (
     <div className="container">
       <h1>React CRUD App w/Hooks</h1>
@@ -63,6 +64,7 @@ const App = () => {
                 setEditing={setEditing}
                 currentUser={currentUser}
                 updateUser={updateUser}
+                deleteUser={deleteUser}
               />
             </Fragment>
           ) : (
